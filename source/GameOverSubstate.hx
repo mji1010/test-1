@@ -64,13 +64,6 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		FlxG.sound.play(Paths.sound(deathSoundName));
 
-		#if android
-		if(ClientPrefs.vibration)
-		{
-			Hardware.vibrate(vibrationTime);
-		}
-		#end
-
 		Conductor.changeBPM(100);
 		// FlxG.camera.followLerp = 1;
 		// FlxG.camera.focusOn(FlxPoint.get(FlxG.width / 2, FlxG.height / 2));
